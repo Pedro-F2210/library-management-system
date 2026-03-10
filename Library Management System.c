@@ -125,17 +125,17 @@ void removerlivro(livro biblioteca[], int *qt) {
     int id, i, pos = -1;
     printf("Introduza o ID do livro que deseja remover: ");
     scanf("%d", &id);
-    for(i = 0; i < *qt; i++) {  // 1️⃣ Procurar o livro
+    for(i = 0; i < *qt; i++) {  
         if(biblioteca[i].ID == id) {
             pos = i;
             break;
         }
     }
-    if(pos == -1) {// 2️⃣ Se não encontrou
+    if(pos == -1) {
         printf("Livro nao encontrado.\n");
         return;
     }
-    for(i = pos; i < *qt - 1; i++) {// 3️⃣ Deslocar elementos (se não for o último)
+    for(i = pos; i < *qt - 1; i++) {
         biblioteca[i] = biblioteca[i + 1]; 
     }
     (*qt)--;// 4️⃣ Diminuir quantidade
@@ -143,29 +143,28 @@ void removerlivro(livro biblioteca[], int *qt) {
 }
 
 void guardarLivros(livro biblioteca[], int qt) {
-    FILE *f = fopen("biblioteca.dat", "wb"); // write binary
-
+    FILE *f = fopen("biblioteca.dat", "wb"); 
     if (f == NULL) {
         printf("Erro ao criar o ficheiro!\n");
         return;
     }
 
-    fwrite(&qt, sizeof(int), 1, f);                 // guarda quantidade
-    fwrite(biblioteca, sizeof(livro), qt, f);       // guarda livros
+    fwrite(&qt, sizeof(int), 1, f);                 
+    fwrite(biblioteca, sizeof(livro), qt, f);     
 
     fclose(f);
 }
 
 void carregarLivros(livro biblioteca[], int *qt) {
-    FILE *f = fopen("biblioteca.dat", "rb"); // read binary
+    FILE *f = fopen("biblioteca.dat", "rb");  
 
     if (f == NULL) {
-        *qt = 0; // ficheiro ainda não existe
+        *qt = 0;  
         return;
     }
 
-    fread(qt, sizeof(int), 1, f);                    // lê quantidade
-    fread(biblioteca, sizeof(livro), *qt, f);        // lê livros
+    fread(qt, sizeof(int), 1, f);                    
+    fread(biblioteca, sizeof(livro), *qt, f);        
 
     fclose(f);
 }
@@ -249,4 +248,5 @@ int main() {
     guardarLivros(biblioteca, qt);
     printf("Encerrando o Programa...");
     return 0;
+
 }
