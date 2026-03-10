@@ -20,4 +20,5 @@ Como executar:
 4. Os dados serão guardados no ficheiro biblioteca.dat
 
 Autor:
-Seu nome
+
+Pedro Fialho
