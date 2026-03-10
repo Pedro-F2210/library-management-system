@@ -1,24 +1,33 @@
-Library Management System
+# Library Management System
 
-Descrição:
-Este projeto é um sistema simples de gestão de biblioteca desenvolvido em C.
+## Description
+This project is a simple **Library Management System** developed in C.  
+It allows users to manage books by adding, listing, searching, and storing them in a file.
 
-Funcionalidades:
-- Adicionar livros
-- Listar livros
-- Procurar livros
-- Guardar livros em ficheiro
+---
 
-Tecnologias:
-- Linguagem C
+## Features
+- Add books
+- List books
+- Search for books
+- Save books to a file
+
+---
+
+## Technologies
+- C Language
 - Embarcadero Dev-C++ 6.3
 
-Como executar:
-1. Abrir o ficheiro do projeto no Dev-C++
-2. Compilar o programa
-3. Executar o programa
-4. Os dados serão guardados no ficheiro biblioteca.dat
+---
 
-Autor:
+## How to Run
 
+1. Open the project file in **Dev-C++**
+2. Compile the program
+3. Run the program
+
+The data will be saved in the file:
+
+## Created by: 
 Pedro Fialho
+
